@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Semantic Web Page | Blog Post</title>
+    <meta name="description" content="A hands-on example of using HTML5 semantic elements to build a blog page structure.">
+    <meta property="og:title" content="Building with Semantic HTML">
+    <meta property="og:description" content="Learn to structure your web pages for better SEO and accessibility.">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <header>
+        <h1>My Developer Journey</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>Day 1: The Power of Semantic HTML</h2>
+                <p>Posted by <strong>Alex</strong> on <time datetime="2024-05-20">May 20, 2024</time></p>
+            </header>
+            <section>
+                <h3>Why Structure Matters</h3>
+                <p>In the early days of web development, we used <code>&lt;div&gt;</code> for everything. This was like building a house with only bricks and no framing, walls, or roof design. Semantic HTML gives our content meaning, making it accessible and maintainable.</p>
+                <p>For example, a screen reader can announce, "Navigation, 4 items," when it encounters a <code>&lt;nav&gt;</code> element, allowing a visually impaired user to quickly decide if they want to browse the links.</p>
+            </section>
+            <section>
+                <h3>A Deep Dive into <code>&lt;article&gt;</code> vs <code>&lt;section&gt;</code></h3>
+                <p>Many beginners confuse these two. Think of it this way: If you were to remove a piece of content and put it on another website, would it make sense on its own? If yes, it's likely an <code>&lt;article&gt;</code>. If it's a chapter within that article, it's a <code>&lt;section&gt;</code>.</p>
+            </section>
+            <aside>
+                <h4>Did You Know?</h4>
+                <p>Using semantic HTML can improve your SEO ranking. Search engines give more weight to text inside <code>&lt;h1&gt;</code> and <code>&lt;article&gt;</code> tags than generic <code>&lt;div&gt;</code>s.</p>
+            </aside>
+            <footer>
+                <p>Tags: <a href="#">HTML</a>, <a href="#">Semantics</a>, <a href="#">Web Development</a></p>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2024 My Developer Journey. All rights reserved.</p>
+        <p>Built with ❤️ and semantic HTML.</p>
+    </footer>
+</body>
+</html>

@@ -1,56 +1,1243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Semantic Web Page | Blog Post</title>
-    <meta name="description" content="A hands-on example of using HTML5 semantic elements to build a blog page structure.">
-    <meta property="og:title" content="Building with Semantic HTML">
-    <meta property="og:description" content="Learn to structure your web pages for better SEO and accessibility.">
-    <meta property="og:type" content="article">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 Ultimate Calisthenics Mastery System | Complete Daily Protocol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #0a0f1c;
+      --secondary-bg: #1a2332;
+      --card-bg: #243447;
+      --accent-warm: #f4a261;
+      --accent-cool: #2a9d8f;
+      --text-primary: #e9ecf3;
+      --text-secondary: #b8c5d6;
+      --text-muted: #8a9bb0;
+      --border-subtle: #374151;
+      --gradient-primary: linear-gradient(135deg, #f4a261, #e76f51, #2a9d8f);
+      --gradient-card: linear-gradient(145deg, #243447, #1a2332);
+      --shadow-glow: 0 0 20px rgba(244, 162, 97, 0.15);
+      --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--primary-bg);
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: radial-gradient(ellipse at top, rgba(244, 162, 97, 0.05), transparent 50%);
+      min-height: 100vh;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 300px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      opacity: 0.1;
+      filter: blur(60px);
+      z-index: -1;
+    }
+
+    .main-title {
+      font-family: 'Crimson Text', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-shadow: var(--shadow-glow);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      background: var(--gradient-card);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .section-title {
+      font-family: 'Crimson Text', serif;
+      font-size: 2rem;
+      color: var(--accent-warm);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-title .icon {
+      font-size: 2.5rem;
+    }
+
+    .daily-schedule {
+      display: grid;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .week-container {
+      background: rgba(42, 157, 143, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      border-left: 4px solid var(--accent-cool);
+    }
+
+    .week-title {
+      font-size: 1.5rem;
+      color: var(--accent-cool);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .day-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.3s ease;
+    }
+
+    .day-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .day-title {
+      font-size: 1.25rem;
+      color: var(--accent-warm);
+      font-weight: 600;
+    }
+
+    .day-focus {
+      background: rgba(244, 162, 97, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      color: var(--accent-warm);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .time-block {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      border-left: 3px solid var(--accent-cool);
+    }
+
+    .time {
+      font-weight: 600;
+      color: var(--accent-cool);
+      font-size: 0.9rem;
+    }
+
+    .activity {
+      color: var(--text-primary);
+    }
+
+    .activity-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .activity-details {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .exercise-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .exercise-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-warm);
+      margin-bottom: 1rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .detail-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1rem;
+      border-radius: 10px;
+      border-left: 3px solid var(--accent-warm);
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: var(--accent-warm);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-content {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .breathing-pattern {
+      background: rgba(42, 157, 143, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 1px solid rgba(42, 157, 143, 0.3);
+    }
+
+    .breathing-title {
+      color: var(--accent-cool);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .muscle-activation {
+      background: linear-gradient(135deg, rgba(244, 162, 97, 0.1), rgba(231, 111, 81, 0.1));
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .muscle-title {
+      color: var(--accent-warm);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .warning-box {
+      background: rgba(231, 111, 81, 0.1);
+      border: 1px solid rgba(231, 111, 81, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning-title {
+      color: #e76f51;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hydration-tracker {
+      background: rgba(42, 157, 143, 0.15);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 2px solid rgba(42, 157, 143, 0.3);
+    }
+
+    .hydration-title {
+      color: var(--accent-cool);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .water-schedule {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .water-time {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .progression-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .progression-table th,
+    .progression-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .progression-table th {
+      background: rgba(244, 162, 97, 0.2);
+      color: var(--accent-warm);
+      font-weight: 600;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .tip-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent-warm);
+    }
+
+    .tip-title {
+      color: var(--accent-warm);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      background: rgba(244, 162, 97, 0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: var(--accent-warm);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .time-block {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>My Developer Journey</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="container">
+    <div class="hero fade-in">
+      <h1 class="main-title">Ultimate Calisthenics Mastery System</h1>
+      <p class="subtitle">Complete 12-Week Progressive Protocol with Daily Schedules, Breathing Patterns, Hydration Timing & Nerve Protection Guidelines</p>
+    </div>
 
-    <main>
-        <article>
-            <header>
-                <h2>Day 1: The Power of Semantic HTML</h2>
-                <p>Posted by <strong>Alex</strong> on <time datetime="2024-05-20">May 20, 2024</time></p>
-            </header>
-            <section>
-                <h3>Why Structure Matters</h3>
-                <p>In the early days of web development, we used <code>&lt;div&gt;</code> for everything. This was like building a house with only bricks and no framing, walls, or roof design. Semantic HTML gives our content meaning, making it accessible and maintainable.</p>
-                <p>For example, a screen reader can announce, "Navigation, 4 items," when it encounters a <code>&lt;nav&gt;</code> element, allowing a visually impaired user to quickly decide if they want to browse the links.</p>
-            </section>
-            <section>
-                <h3>A Deep Dive into <code>&lt;article&gt;</code> vs <code>&lt;section&gt;</code></h3>
-                <p>Many beginners confuse these two. Think of it this way: If you were to remove a piece of content and put it on another website, would it make sense on its own? If yes, it's likely an <code>&lt;article&gt;</code>. If it's a chapter within that article, it's a <code>&lt;section&gt;</code>.</p>
-            </section>
-            <aside>
-                <h4>Did You Know?</h4>
-                <p>Using semantic HTML can improve your SEO ranking. Search engines give more weight to text inside <code>&lt;h1&gt;</code> and <code>&lt;article&gt;</code> tags than generic <code>&lt;div&gt;</code>s.</p>
-            </aside>
-            <footer>
-                <p>Tags: <a href="#">HTML</a>, <a href="#">Semantics</a>, <a href="#">Web Development</a></p>
-            </footer>
-        </article>
-    </main>
+    <!-- Week 1-2: Foundation Building -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">🏗️</span>
+        Weeks 1-2: Foundation Building Phase
+      </h2>
+      
+      <div class="week-container">
+        <h3 class="week-title">Week 1 Schedule</h3>
+        
+        <!-- Monday -->
+        <div class="day-card">
+          <div class="day-header">
+            <h4 class="day-title">Monday - Upper Body Foundation</h4>
+            <span class="day-focus">Push/Pull Development</span>
+          </div>
+          
+          <div class="timeline">
+            <div class="time-block">
+              <div class="time">6:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Wake-Up Hydration</div>
+                <div class="activity-details">
+                  <strong>500ml room temperature water</strong> with pinch of sea salt. Drink slowly over 10 minutes to rehydrate after 8-hour fast.
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">6:30 AM</div>
+              <div class="activity">
+                <div class="activity-title">Joint Mobility & Activation</div>
+                <div class="activity-details">
+                  <strong>15 minutes total</strong>
+                  <ul style="margin-top: 0.5rem; padding-left: 1rem;">
+                    <li>Neck rolls (5 each direction) - breathe deeply</li>
+                    <li>Shoulder circles (10 forward, 10 backward)</li>
+                    <li>Arm circles (15 each direction)</li>
+                    <li>Wrist circles (10 each direction)</li>
+                    <li>Hip circles (10 each direction)</li>
+                    <li>Ankle circles (10 each direction)</li>
+                  </ul>
+                </div>
+                
+                <div class="breathing-pattern">
+                  <div class="breathing-title">🫁 Breathing Pattern</div>
+                  <div>4-4-4 pattern: Inhale 4 seconds → Hold 4 seconds → Exhale 4 seconds. Maintain throughout mobility work.</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">6:45 AM</div>
+              <div class="activity">
+                <div class="activity-title">Dynamic Warm-Up</div>
+                <div class="activity-details">
+                  <strong>10 minutes activation</strong>
+                  <div class="exercise-grid">
+                    <div class="exercise-card">
+                      <div class="exercise-name">Arm Swings</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">2 sets x 15 each direction</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">Controlled 2-second swing each way</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Breathing</div>
+                          <div class="detail-content">Exhale on forward swing, inhale on back swing</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Focus Muscles</div>
+                          <div class="detail-content">Deltoids, rotator cuff, rhomboids</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Leg Swings</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">2 sets x 12 each leg (front/back, side/side)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">Smooth 3-second full swing</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Breathing</div>
+                          <div class="detail-content">Natural rhythm, don't hold breath</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Focus Muscles</div>
+                          <div class="detail-content">Hip flexors, glutes, adductors</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">7:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Pre-Workout Hydration</div>
+                <div class="activity-details">
+                  <strong>250ml water</strong> 15 minutes before training. Small sips to avoid stomach discomfort.
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">7:15 AM</div>
+              <div class="activity">
+                <div class="activity-title">Main Training Session</div>
+                <div class="activity-details">
+                  <strong>35 minutes structured training</strong>
+                  
+                  <div class="exercise-grid">
+                    <div class="exercise-card">
+                      <div class="exercise-name">Incline Push-Ups</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">3 sets x 8-12 reps (60° incline)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">3 sec down, 1 sec pause, 2 sec up</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Rest Between Sets</div>
+                          <div class="detail-content">90 seconds active rest (light walking)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Form Cues</div>
+                          <div class="detail-content">Body straight line, hands under shoulders, core tight</div>
+                        </div>
+                      </div>
+                      
+                      <div class="muscle-activation">
+                        <div class="muscle-title">💪 Muscle Activation Sequence</div>
+                        <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                          <li><strong>Setup:</strong> Engage core first (imagine bracing for punch)</li>
+                          <li><strong>Descent:</strong> Activate lats to control shoulder blades</li>
+                          <li><strong>Bottom:</strong> Feel chest stretch, maintain wrist neutrality</li>
+                          <li><strong>Push:</strong> Drive through palms, squeeze chest at top</li>
+                        </ol>
+                      </div>
+                      
+                      <div class="breathing-pattern">
+                        <div class="breathing-title">🫁 Breathing Protocol</div>
+                        <div>Inhale on descent (3 seconds), hold briefly at bottom, exhale forcefully on push-up (2 seconds)</div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Assisted Pull-Ups (Band/Chair)</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">3 sets x 5-8 reps (heavy assistance)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">2 sec up, 1 sec hold, 4 sec down</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Rest Between Sets</div>
+                          <div class="detail-content">2 minutes (grip recovery time)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Form Cues</div>
+                          <div class="detail-content">Dead hang start, chest to bar, shoulders down</div>
+                        </div>
+                      </div>
+                      
+                      <div class="muscle-activation">
+                        <div class="muscle-title">💪 Muscle Activation Sequence</div>
+                        <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                          <li><strong>Dead Hang:</strong> Activate lats, depress shoulders</li>
+                          <li><strong>Pull:</strong> Drive elbows down and back, engage rhomboids</li>
+                          <li><strong>Top:</strong> Squeeze shoulder blades, open chest</li>
+                          <li><strong>Lower:</strong> Control with lats, resist gravity</li>
+                        </ol>
+                      </div>
+                      
+                      <div class="breathing-pattern">
+                        <div class="breathing-title">🫁 Breathing Protocol</div>
+                        <div>Inhale in dead hang, exhale during pull-up, brief hold at top, inhale on controlled descent</div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Bodyweight Squats</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">3 sets x 15-20 reps</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">3 sec down, 1 sec pause, 2 sec up</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Rest Between Sets</div>
+                          <div class="detail-content">60 seconds</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Form Cues</div>
+                          <div class="detail-content">Knees track over toes, chest up, weight on heels</div>
+                        </div>
+                      </div>
+                      
+                      <div class="muscle-activation">
+                        <div class="muscle-title">💪 Muscle Activation Sequence</div>
+                        <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                          <li><strong>Setup:</strong> Engage core, activate glutes</li>
+                          <li><strong>Descent:</strong> Hip hinge first, then knee bend</li>
+                          <li><strong>Bottom:</strong> Feel glute stretch, maintain knee alignment</li>
+                          <li><strong>Rise:</strong> Drive through heels, squeeze glutes at top</li>
+                        </ol>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Plank Hold</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Time</div>
+                          <div class="detail-content">3 sets x 30-45 seconds</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Rest Between Sets</div>
+                          <div class="detail-content">45 seconds</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Form Cues</div>
+                          <div class="detail-content">Straight line, neutral neck, elbows under shoulders</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Progression</div>
+                          <div class="detail-content">Add 5 seconds when you can hold perfect form</div>
+                        </div>
+                      </div>
+                      
+                      <div class="breathing-pattern">
+                        <div class="breathing-title">🫁 Breathing Protocol</div>
+                        <div>Steady 6-6 pattern: 6 second inhale through nose, 6 second exhale through mouth. Never hold breath.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">7:50 AM</div>
+              <div class="activity">
+                <div class="activity-title">Post-Workout Hydration</div>
+                <div class="activity-details">
+                  <strong>400ml water</strong> immediately after training. Add electrolytes if sweating heavily (>60 minutes training).
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">8:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Cool-Down & Mobility</div>
+                <div class="activity-details">
+                  <strong>15 minutes recovery protocol</strong>
+                  <ul style="margin-top: 0.5rem; padding-left: 1rem;">
+                    <li><strong>Light walking:</strong> 3 minutes to lower heart rate</li>
+                    <li><strong>Upper body stretches:</strong> 5 minutes
+                      <ul style="margin-left: 1rem;">
+                        <li>Chest doorway stretch (30s each arm)</li>
+                        <li>Overhead shoulder stretch (30s each arm)</li>
+                        <li>Cross-body shoulder stretch (30s each arm)</li>
+                        <li>Tricep stretch (30s each arm)</li>
+                      </ul>
+                    </li>
+                    <li><strong>Deep breathing:</strong> 4-7-8 pattern x 5 cycles</li>
+                  </ul>
+                </div>
+                
+                <div class="breathing-pattern">
+                  <div class="breathing-title">🫁 Recovery Breathing (4-7-8 Technique)</div>
+                  <div>Inhale for 4 counts → Hold for 7 counts → Exhale for 8 counts. Activates parasympathetic nervous system for recovery.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tuesday -->
+        <div class="day-card">
+          <div class="day-header">
+            <h4 class="day-title">Tuesday - Active Recovery & Mobility</h4>
+            <span class="day-focus">Flexibility & Movement</span>
+          </div>
+          
+          <div class="timeline">
+            <div class="time-block">
+              <div class="time">6:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Morning Hydration</div>
+                <div class="activity-details">
+                  <strong>500ml warm water</strong> with lemon slice. Aids digestion and liver function.
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">7:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Gentle Movement Flow</div>
+                <div class="activity-details">
+                  <strong>20 minutes total body mobility</strong>
+                  <div class="exercise-grid">
+                    <div class="exercise-card">
+                      <div class="exercise-name">Cat-Cow Stretches</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Duration</div>
+                          <div class="detail-content">2 minutes, 15 cycles</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Breathing</div>
+                          <div class="detail-content">Inhale on cow (arch), exhale on cat (round)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Focus</div>
+                          <div class="detail-content">Spinal mobility, morning stiffness relief</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Hip Circles & Figure-8s</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Duration</div>
+                          <div class="detail-content">3 minutes each direction</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Movement Quality</div>
+                          <div class="detail-content">Slow, controlled, full range</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Focus</div>
+                          <div class="detail-content">Hip joint health, mobility maintenance</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">10:00 AM</div>
+              <div class="activity">
+                <div class="activity-title">Mid-Morning Hydration</div>
+                <div class="activity-details">
+                  <strong>300ml water</strong> between meals. Maintain consistent hydration levels.
+                </div>
+              </div>
+            </div>
+            
+            <div class="time-block">
+              <div class="time">3:00 PM</div>
+              <div class="activity">
+                <div class="activity-title">Afternoon Stretch Session</div>
+                <div class="activity-details">
+                  <strong>15 minutes focused flexibility</strong>
+                  <ul style="margin-top: 0.5rem; padding-left: 1rem;">
+                    <li><strong>Forward fold:</strong> 60 seconds, breathe into hamstrings</li>
+                    <li><strong>Seated spinal twist:</strong> 45 seconds each side</li>
+                    <li><strong>Hip flexor stretch:</strong> 60 seconds each leg</li>
+                    <li><strong>Shoulder rolls:</strong> 20 forward, 20 backward</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Wednesday -->
+        <div class="day-card">
+          <div class="day-header">
+            <h4 class="day-title">Wednesday - Lower Body Foundation</h4>
+            <span class="day-focus">Leg Strength & Stability</span>
+          </div>
+          
+          <div class="timeline">
+            <div class="time-block">
+              <div class="time">7:15 AM</div>
+              <div class="activity">
+                <div class="activity-title">Main Training Session</div>
+                <div class="activity-details">
+                  <div class="exercise-grid">
+                    <div class="exercise-card">
+                      <div class="exercise-name">Goblet Squats (Water Jug)</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">4 sets x 12-15 reps</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">3 sec down, 2 sec pause, 2 sec up</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Load</div>
+                          <div class="detail-content">Start with 5L water jug (5kg)</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Rest</div>
+                          <div class="detail-content">90 seconds between sets</div>
+                        </div>
+                      </div>
+                      
+                      <div class="muscle-activation">
+                        <div class="muscle-title">💪 Targeted Muscles</div>
+                        <div><strong>Primary:</strong> Quadriceps, glutes, core<br>
+                        <strong>Secondary:</strong> Hamstrings, calves, upper traps</div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Single-Leg Glute Bridges</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">3 sets x 10 each leg</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">2 sec up, 2 sec hold, 3 sec down</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Focus</div>
+                          <div class="detail-content">Glute activation, hip stability</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="exercise-card">
+                      <div class="exercise-name">Calf Raises</div>
+                      <div class="detail-grid">
+                        <div class="detail-item">
+                          <div class="detail-label">Sets x Reps</div>
+                          <div class="detail-content">4 sets x 20-25 reps</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Tempo</div>
+                          <div class="detail-content">2 sec up, 1 sec hold, 3 sec down</div>
+                        </div>
+                        <div class="detail-item">
+                          <div class="detail-label">Progression</div>
+                          <div class="detail-content">Week 2: Single-leg calf raises</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>© 2024 My Developer Journey. All rights reserved.</p>
-        <p>Built with ❤️ and semantic HTML.</p>
-    </footer>
+    <!-- Hydration Protocol Section -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">💧</span>
+        Daily Hydration Protocol
+      </h2>
+      
+      <div class="hydration-tracker">
+        <h3 class="hydration-title">Optimal Hydration Timeline</h3>
+        <div class="water-schedule">
+          <div class="water-time">
+            <strong>6:00 AM</strong><br>
+            500ml room temp water<br>
+            <em>Rehydration after sleep</em>
+          </div>
+          <div class="water-time">
+            <strong>7:00 AM</strong><br>
+            250ml pre-workout<br>
+            <em>15min before training</em>
+          </div>
+          <div class="water-time">
+            <strong>During Training</strong><br>
+            150-200ml every 15min<br>
+            <em>If session >45min</em>
+          </div>
+          <div class="water-time">
+            <strong>Post-Workout</strong><br>
+            400-500ml immediately<br>
+            <em>Replace sweat losses</em>
+          </div>
+          <div class="water-time">
+            <strong>10:00 AM</strong><br>
+            300ml between meals<br>
+            <em>Maintain levels</em>
+          </div>
+          <div class="water-time">
+            <strong>12:30 PM</strong><br>
+            250ml before lunch<br>
+            <em>30min before eating</em>
+          </div>
+          <div class="water-time">
+            <strong>3:00 PM</strong><br>
+            300ml afternoon<br>
+            <em>Combat 3pm slump</em>
+          </div>
+          <div class="water-time">
+            <strong>6:00 PM</strong><br>
+            250ml before dinner<br>
+            <em>30min before eating</em>
+          </div>
+          <div class="water-time">
+            <strong>8:00 PM</strong><br>
+            200ml final intake<br>
+            <em>Stop 2hrs before bed</em>
+          </div>
+        </div>
+        
+        <div class="warning-box">
+          <div class="warning-title">⚠️ Hydration Guidelines</div>
+          <ul>
+            <li><strong>Total daily intake:</strong> 35-40ml per kg body weight (minimum 2.5L for 70kg person)</li>
+            <li><strong>Temperature:</strong> Room temperature optimal for absorption</li>
+            <li><strong>Timing:</strong> Stop drinking 2 hours before bed to avoid sleep disruption</li>
+            <li><strong>Exercise adjustment:</strong> Add 500-750ml for every hour of training</li>
+            <li><strong>Electrolytes:</strong> Add pinch of sea salt if sweating heavily (>1 hour training)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nerve Protection & Safety -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">🛡️</span>
+        Nerve Protection & Injury Prevention
+      </h2>
+      
+      <div class="warning-box">
+        <div class="warning-title">🚨 Critical: Ulnar Nerve Protection During Handstands</div>
+        <p>Handstand training can compress the ulnar nerve, leading to numbness, tingling, or weakness in pinky/ring fingers. Follow these protocols:</p>
+      </div>
+      
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-title">🤲 Proper Wrist Positioning</div>
+          <ul>
+            <li><strong>Finger spread:</strong> Wide finger spread distributes weight</li>
+            <li><strong>Palm contact:</strong> Full palm contact, avoid cupping</li>
+            <li><strong>Wrist angle:</strong> Slight extension (15-20°), never hyperextension</li>
+            <li><strong>Weight distribution:</strong> 60% on palms, 40% on fingers</li>
+            <li><strong>Progression time:</strong> Start with 10-second holds, add 5 seconds weekly</li>
+          </ul>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">⏰ Time Limits & Recovery</div>
+          <ul>
+            <li><strong>Max hold time:</strong> Never exceed 60 seconds continuously</li>
+            <li><strong>Rest ratio:</strong> 1:2 work to rest (30s hold = 60s rest minimum)</li>
+            <li><strong>Daily limit:</strong> Maximum 10 minutes total handstand practice</li>
+            <li><strong>Warning signs:</strong> Stop immediately if numbness, tingling, or pain</li>
+            <li><strong>Recovery protocol:</strong> 48-hour break if nerve symptoms appear</li>
+          </ul>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🧘 Pre-Handstand Preparation</div>
+          <ul>
+            <li><strong>Wrist circles:</strong> 20 each direction before training</li>
+            <li><strong>Tendon glides:</strong> Finger extension/flexion x 15</li>
+            <li><strong>Nerve mobilization:</strong> Gentle ulnar nerve stretches</li>
+            <li><strong>Grip strength:</strong> Squeeze tennis ball x 20 before practice</li>
+            <li><strong>Blood flow:</strong> Arm swings and shoulder rolls</li>
+          </ul>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🦴 Shoulder Impingement Prevention</div>
+          <ul>
+            <li><strong>Overhead mobility:</strong> Daily shoulder dislocations (band/towel)</li>
+            <li><strong>Scapular strength:</strong> Wall slides, band pull-aparts</li>
+            <li><strong>Rotator cuff health:</strong> External rotation exercises</li>
+            <li><strong>Thoracic mobility:</strong> Cat-cow, thoracic extensions</li>
+            <li><strong>Progress slowly:</strong> Master wall handstand before freestanding</li>
+          </ul>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🦵 Lower Back Protection</div>
+          <ul>
+            <li><strong>Core activation:</strong> Engage deep abdominals throughout</li>
+            <li><strong>Hip flexor flexibility:</strong> Daily couch stretch holds</li>
+            <li><strong>Glute activation:</strong> Pre-training bridges and clamshells</li>
+            <li><strong>Neutral spine:</strong> Avoid excessive lumbar extension</li>
+            <li><strong>Progression rule:</strong> Master hollow body hold before handstands</li>
+          </ul>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">⚡ Nerve Gliding Exercises</div>
+          <ul>
+            <li><strong>Median nerve:</strong> Prayer stretch, reverse prayer</li>
+            <li><strong>Ulnar nerve:</strong> Gentle elbow flexion with neck side-bend</li>
+            <li><strong>Radial nerve:</strong> Wrist flexion with shoulder extension</li>
+            <li><strong>Frequency:</strong> 2-3x daily, hold 15-30 seconds</li>
+            <li><strong>Intensity:</strong> Gentle tension only, never painful</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Progression Table -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">📈</span>
+        12-Week Progression Timeline
+      </h2>
+      
+      <table class="progression-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Focus</th>
+            <th>Push-Up Progression</th>
+            <th>Pull-Up Progression</th>
+            <th>Skill Introduction</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-2</td>
+            <td>Foundation</td>
+            <td>Incline push-ups (60°)</td>
+            <td>Assisted pulls (heavy band)</td>
+            <td>Wall handstand holds</td>
+            <td>Low volume, perfect form</td>
+          </tr>
+          <tr>
+            <td>3-4</td>
+            <td>Strength Base</td>
+            <td>Incline push-ups (45°)</td>
+            <td>Assisted pulls (medium band)</td>
+            <td>Crow pose holds</td>
+            <td>Moderate volume increase</td>
+          </tr>
+          <tr>
+            <td>5-6</td>
+            <td>Pattern Mastery</td>
+            <td>Knee push-ups (perfect form)</td>
+            <td>Assisted pulls (light band)</td>
+            <td>Handstand chest-to-wall</td>
+            <td>Higher volume, time under tension</td>
+          </tr>
+          <tr>
+            <td>7-8</td>
+            <td>Strength Development</td>
+            <td>Full push-ups (3-5 reps)</td>
+            <td>Jumping negatives (5s descent)</td>
+            <td>Freestanding handstand attempts</td>
+            <td>Strength focus, lower reps</td>
+          </tr>
+          <tr>
+            <td>9-10</td>
+            <td>Skill Integration</td>
+            <td>Push-up variations</td>
+            <td>First unassisted pull-ups</td>
+            <td>Handstand 10-second holds</td>
+            <td>Skill practice daily</td>
+          </tr>
+          <tr>
+            <td>11-12</td>
+            <td>Advanced Patterns</td>
+            <td>Diamond/archer push-ups</td>
+            <td>Multiple unassisted pulls</td>
+            <td>Moving into planche leans</td>
+            <td>Complex movement patterns</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Breathing Mastery -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">🫁</span>
+        Advanced Breathing Protocols
+      </h2>
+      
+      <div class="exercise-grid">
+        <div class="exercise-card">
+          <div class="exercise-name">Training Breathing Patterns</div>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-label">Strength Training</div>
+              <div class="detail-content">Inhale on eccentric (lowering), exhale on concentric (lifting). Never hold breath under load.</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Isometric Holds</div>
+              <div class="detail-content">6-6 rhythm: 6 seconds in through nose, 6 seconds out through mouth. Maintains oxygen flow.</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">High Intensity</div>
+              <div class="detail-content">Natural rhythm, don't force pattern. Focus on full exhalation to remove CO2.</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Recovery Breathing</div>
+              <div class="detail-content">4-7-8 pattern: Inhale 4, hold 7, exhale 8. Activates parasympathetic nervous system.</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="exercise-card">
+          <div class="exercise-name">Pre-Training Activation</div>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-label">Wim Hof Method</div>
+              <div class="detail-content">30 deep breaths → exhale and hold → inhale and hold 15s. Repeat 3 cycles. Increases alertness.</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Box Breathing</div>
+              <div class="detail-content">4-4-4-4 pattern: Inhale 4, hold 4, exhale 4, hold 4. Calms nervous system before training.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Tips & Warnings -->
+    <div class="section fade-in">
+      <h2 class="section-title">
+        <span class="icon">💎</span>
+        Master-Level Training Tips
+      </h2>
+      
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-title">🎯 Form Over Everything</div>
+          <p>One perfect rep beats ten sloppy ones. Film yourself weekly to check form degradation. If form breaks down, stop the set immediately. Quality movement patterns become neurologically ingrained.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🔄 Progressive Overload Principles</div>
+          <p>Progress in this order: <span class="highlight">Form → Reps → Range of Motion → Tempo → Difficulty</span>. Only advance when you can perform all reps with perfect form and controlled tempo.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">😴 Recovery Optimization</div>
+          <p>Sleep 7-9 hours nightly. Muscle growth happens during rest, not training. Poor sleep = poor recovery = injury risk. Track sleep quality and adjust training intensity accordingly.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🔥 Mind-Muscle Connection</div>
+          <p>Before each rep, visualize the target muscles contracting. Feel the muscle working throughout the entire range of motion. This increases activation by up to 30%.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">⚖️ Balance & Symmetry</div>
+          <p>Equal pushing and pulling volume prevents imbalances. If you do 30 push-ups, you should be able to do 30 pull-ups (assisted if needed). Check for left-right imbalances monthly.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-title">🧠 Neurological Adaptation</div>
+          <p>First 4-6 weeks are mostly neural adaptations. Your brain learns to recruit muscles more efficiently. Strength gains without visible muscle growth are normal and valuable.</p>
+        </div>
+      </div>
+      
+      <div class="warning-box">
+        <div class="warning-title">🚫 Absolute Don'ts</div>
+        <ul>
+          <li><strong>Never train through sharp pain</strong> - Muscle fatigue is OK, joint pain is not</li>
+          <li><strong>Don't rush progressions</strong> - Tendons adapt slower than muscles (6-12 weeks vs 2-4 weeks)</li>
+          <li><strong>Avoid ego lifting</strong> - Perfect form at easier progression beats sloppy form at harder progression</li>
+          <li><strong>Don't neglect warmup</strong> - Cold muscles and joints are injury-prone</li>
+          <li><strong>Never hold breath during exertion</strong> - Can cause dangerous blood pressure spikes</li>
+          <li><strong>Don't train same muscles daily</strong> - Allow 48-72 hours recovery between intense sessions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section, .day-card, .exercise-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
